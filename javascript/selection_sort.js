@@ -1,5 +1,12 @@
 function selectionSort(arr) {
-  // type your code here
+  const sortedArr = []
+  while (arr.length > 0) {
+    const min = Math.min(...arr)
+    const i = arr.indexOf(min)
+    sortedArr.push(min)
+    arr.splice(i, 1)
+  }
+  return sortedArr
 }
 
 if (require.main === module) {
